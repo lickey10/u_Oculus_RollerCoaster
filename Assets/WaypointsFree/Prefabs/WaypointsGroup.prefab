@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3618415417113447540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3618415417113447546}
+  - component: {fileID: 3618415417113447541}
+  m_Layer: 0
+  m_Name: WaypointsGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3618415417113447546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3618415417113447540}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.2, y: 0.77, z: 50.56}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3618415417113447541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3618415417113447540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c9625c5b7836584397b59b00907d6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XYZConstraint: 0
+  waypoints:
+  - position: {x: 0, y: 0, z: 0}
+    Speed: 5
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    xyzPosition: {x: 0, y: 0, z: 0}
+    xyPosition: {x: 0, y: 0, z: 0}
+    xzPosition: {x: 0, y: 0, z: 0}
+  - position: {x: 0, y: -1.0750504, z: 14.586979}
+    Speed: 10
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    xyzPosition: {x: 0, y: -1.0750504, z: 14.586979}
+    xyPosition: {x: 0, y: -1.0750504, z: 0}
+    xzPosition: {x: 0, y: 0, z: 14.586979}
+  - position: {x: 0, y: 5.7221375, z: 22.226254}
+    Speed: 15
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    xyzPosition: {x: 0, y: 5.7221375, z: 22.226254}
+    xyPosition: {x: 0, y: 5.7221375, z: 0}
+    xzPosition: {x: 0, y: 0, z: 22.226254}
+  - position: {x: 0, y: 15.916424, z: 52.4145}
+    Speed: 20
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    xyzPosition: {x: 0, y: 15.916424, z: 52.4145}
+    xyPosition: {x: 0, y: 15.916424, z: 0}
+    xzPosition: {x: 0, y: 0, z: 52.4145}
+  - position: {x: 16.574158, y: 15.916424, z: 70.52487}
+    Speed: 5
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    xyzPosition: {x: 16.574158, y: 15.916424, z: 70.52487}
+    xyPosition: {x: 16.574158, y: 15.916424, z: 0}
+    xzPosition: {x: 16.574158, y: 0, z: 70.52487}
+  - position: {x: 21.770195, y: 15.916424, z: 62.75023}
+    Speed: 10
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    xyzPosition: {x: 21.770195, y: 15.916424, z: 62.75023}
+    xyPosition: {x: 21.770195, y: 15.916424, z: 0}
+    xzPosition: {x: 21.770195, y: 0, z: 62.75023}
+  - position: {x: 21.770195, y: 15.916424, z: 55.509377}
+    Speed: 15
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    xyzPosition: {x: 21.770195, y: 15.916424, z: 55.509377}
+    xyPosition: {x: 21.770195, y: 15.916424, z: 0}
+    xzPosition: {x: 21.770195, y: 0, z: 55.509377}
+  - position: {x: 29.462101, y: 15.916424, z: 45.287476}
+    Speed: 20
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    xyzPosition: {x: 29.462101, y: 15.916424, z: 45.287476}
+    xyPosition: {x: 29.462101, y: 15.916424, z: 0}
+    xzPosition: {x: 29.462101, y: 0, z: 45.287476}
+  - position: {x: 29.462101, y: 15.916424, z: 36.423683}
+    Speed: 5
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    xyzPosition: {x: 29.462101, y: 15.916424, z: 36.423683}
+    xyPosition: {x: 29.462101, y: 15.916424, z: 0}
+    xzPosition: {x: 29.462101, y: 0, z: 36.423683}
+  - position: {x: 23.32019, y: 15.916424, z: 31.76966}
+    Speed: 10
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    xyzPosition: {x: 23.32019, y: 15.916424, z: 31.76966}
+    xyPosition: {x: 23.32019, y: 15.916424, z: 0}
+    xzPosition: {x: 23.32019, y: 0, z: 31.76966}
+  - position: {x: 0, y: 0, z: 0}
+    Speed: 5
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    xyzPosition: {x: 0, y: 0, z: 0}
+    xyPosition: {x: 0, y: 0, z: 0}
+    xzPosition: {x: 0, y: 0, z: 0}
