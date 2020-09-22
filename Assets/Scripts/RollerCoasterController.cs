@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class RollerCoasterController : MonoBehaviour
 {
+    public AudioSource ScreamAudioSource;
+    public AudioClip ScreamAudioClip;
+
     WaypointsFree.WaypointsTraveler waypointsTraveler;
 
     // Start is called before the first frame update
     void Start()
     {
         waypointsTraveler = GetComponent<WaypointsFree.WaypointsTraveler>();
+
+        if(ScreamAudioSource == null)
+            ScreamAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -59,7 +65,10 @@ public class RollerCoasterController : MonoBehaviour
         if (Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") >= 0.9f)
         {
             if (!waypointsTraveler.IsMoving)
+            {
+                waypointsTraveler.ResetTraveler();
                 waypointsTraveler.Move(true);
+            }
 
             Debug.Log("Oculus_CrossPlatform_SecondaryIndexTrigger TRIGGER PRESS DETECTED");
             //ShootArrow();
@@ -71,7 +80,12 @@ public class RollerCoasterController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             if (!waypointsTraveler.IsMoving)
+            {
+                waypointsTraveler.ResetTraveler();
                 waypointsTraveler.Move(true);
+            }
+            else
+                ScreamAudioSource.PlayOneShot(ScreamAudioClip);
 
             Debug.Log("Fire1 TRIGGER PRESS DETECTED");
             //LoadArrow();

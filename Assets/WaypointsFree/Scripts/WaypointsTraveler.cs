@@ -222,7 +222,7 @@ namespace WaypointsFree
                     // Stop moving when an endpoint is reached
                     if(EndReachedBehavior == EndpointBehavior.STOP)
                     {
-                        isMoving = true;
+                        isMoving = false;
                         return;
                     }
 
