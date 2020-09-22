@@ -3,14 +3,47 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FerrisSpin : MonoBehaviour {
-    public float speed = 10f;
+    public float Speed = 10f;
+    public bool RotateOnStart = false;
+
+    public bool IsRotating
+    {
+        get { return rotating; }
+    }
+
+    private bool rotating = false;
+
     // Use this for initialization
     void Start () {
-		
+        if (RotateOnStart)
+            StartRotating();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-            transform.Rotate( new Vector3(0, 0, -1f), speed * Time.deltaTime);
+        if(rotating)
+            transform.Rotate( new Vector3(0, 0, -1f), Speed * Time.deltaTime);
+
+        if (Input.GetButtonDown("Fire1") || Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") >= 0.9f || Input.GetAxis("Oculus_CrossPlatform_PrimaryIndexTrigger") >= 0.9f) 
+        {
+            if (!rotating)
+                StartRotating();
+            else
+                StopRotating();
+
+            Debug.Log("Fire1 TRIGGER PRESS DETECTED");
+            
+
+        }
+    }
+
+    public void StopRotating()
+    {
+        rotating = false;
+    }
+
+    public void StartRotating()
+    {
+        rotating = true;
     }
 }
