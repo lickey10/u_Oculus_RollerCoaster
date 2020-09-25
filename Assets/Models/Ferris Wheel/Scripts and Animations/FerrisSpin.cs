@@ -24,16 +24,17 @@ public class FerrisSpin : MonoBehaviour {
         if(rotating)
             transform.Rotate( new Vector3(0, 0, -1f), Speed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Fire1") || Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") >= 0.9f || Input.GetAxis("Oculus_CrossPlatform_PrimaryIndexTrigger") >= 0.9f) 
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Ride_FerrisWheel")//only control the ferris wheel while riding it
         {
-            if (!rotating)
-                StartRotating();
-            else
-                StopRotating();
+            if (Input.GetButtonDown("Fire1") || Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") >= 0.9f || Input.GetAxis("Oculus_CrossPlatform_PrimaryIndexTrigger") >= 0.9f)
+            {
+                if (!rotating)
+                    StartRotating();
+                else
+                    StopRotating();
 
-            Debug.Log("Fire1 TRIGGER PRESS DETECTED");
-            
-
+                Debug.Log("Fire1 TRIGGER PRESS DETECTED");
+            }
         }
     }
 
@@ -44,6 +45,9 @@ public class FerrisSpin : MonoBehaviour {
 
     public void StartRotating()
     {
+        opencloseDoor doorControls = gameObject.GetComponentInChildren<opencloseDoor>();
+        doorControls.OpenDoor();
+
         rotating = true;
     }
 }
