@@ -46,7 +46,7 @@ public class FerrisSpin : MonoBehaviour {
     public void StartRotating()
     {
         opencloseDoor doorControls = gameObject.GetComponentInChildren<opencloseDoor>();
-        doorControls.OpenDoor();
+        doorControls.CloseDoor();
 
         rotating = true;
     }

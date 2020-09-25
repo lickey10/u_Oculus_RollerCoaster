@@ -39,7 +39,8 @@ public class FerrisWheelCarDetectorStop : MonoBehaviour
                 CarDetectorStart.enabled = true;
                 thisBoxCollider.enabled = false;
 
-                SceneManager.LoadSceneAsync(0);
+                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "AmusementPark")//only reload the scene if we aren't in the amusement park scene
+                    SceneManager.LoadSceneAsync(0);
             }
         }
     }

@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/AmusementPark.unity
+    guid: 05bf8f3f4b12b694a80b700731d98809
+  - enabled: 1
     path: Assets/Scenes/Ride_FerrisWheel.unity
     guid: 738f7d4b1552d8f42a98d8fc5f50df91
+  - enabled: 1
+    path: Assets/Scenes/Ride_RollerCoaster.unity
+    guid: 6f6711a990f691a419154ab801eee8ca
   m_configObjects: {}
