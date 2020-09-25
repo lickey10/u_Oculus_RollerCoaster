@@ -8,7 +8,6 @@ public class FerrisWheelCarDetectorStart : MonoBehaviour
     //public int NumberOfRotations = 1;
     public BoxCollider CarDetectorStop;
 
-    private int rotationCounter = 0;
     private BoxCollider thisBoxCollider;
     //private bool hasRideStarted = false;
 
@@ -26,26 +25,15 @@ public class FerrisWheelCarDetectorStart : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "PlayersCar")//stop the car
+        if(other.gameObject.tag == "PlayersCar")//enable CarDetectorStop
         {
-            //rotationCounter++;
-
-            //if (rotationCounter >= NumberOfRotations)
-            //{
-                //FerrisSpinReference.StopRotating();
-                //rotationCounter = 0;
-                //hasRideStarted = false;
-                CarDetectorStop.enabled = true;
-                thisBoxCollider.enabled = false;
-            //}
+            CarDetectorStop.enabled = true;
+            thisBoxCollider.enabled = false;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        //if (other.gameObject.tag == "PlayersCar")
-        //{
-        //    hasRideStarted = true;
-        //}
+        
     }
 }

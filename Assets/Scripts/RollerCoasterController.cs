@@ -21,75 +21,58 @@ public class RollerCoasterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float leftTrigger = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.Touch);
-        //float rightTrigger = OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger, OVRInput.Controller.Touch);
-        float rightTrigger = OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
-        
-
-        Debug.Log("WEAPON FIRE UPDATE - LT = " + leftTrigger + " RT = " + rightTrigger);
-
-        if (leftTrigger != 0)
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Ride_RollerCoaster")//only control the roller coaster while riding it
         {
-            if(!waypointsTraveler.IsMoving)
-                waypointsTraveler.Move(true);
+            float leftTrigger = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.Touch);
+            //float rightTrigger = OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger, OVRInput.Controller.Touch);
+            float rightTrigger = OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
 
-            Debug.Log("LEFT TRIGGER PRESS DETECTED");
-            //if (!firingLeft)
-            //{
-                
-            //    Debug.Log("FIRE WEAPON");
-            //}
-        }
-        /*if (leftTrigger == 0)
-        {
-            Debug.Log("STOP FIRE WEAPON");
-            firingLeft = false;
-        }*/
+            Debug.Log("WEAPON FIRE UPDATE - LT = " + leftTrigger + " RT = " + rightTrigger);
 
-        if (rightTrigger != 0)
-        {
-            if (!waypointsTraveler.IsMoving)
-                waypointsTraveler.Move(true);
-
-            Debug.Log("RIGHT TRIGGER PRESS DETECTED");
-
-            //if (!firingRight)
-            //{
-            //    firingRight = true;
-            //    weaponRight.Fire();
-            //}
-        }
-
-
-
-        if (Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") >= 0.9f)
-        {
-            if (!waypointsTraveler.IsMoving)
+            if (leftTrigger != 0)
             {
-                waypointsTraveler.ResetTraveler();
-                waypointsTraveler.Move(true);
+                if (!waypointsTraveler.IsMoving)
+                    waypointsTraveler.Move(true);
+
+                Debug.Log("LEFT TRIGGER PRESS DETECTED");
             }
 
-            Debug.Log("Oculus_CrossPlatform_SecondaryIndexTrigger TRIGGER PRESS DETECTED");
-            //ShootArrow();
+            if (rightTrigger != 0)
+            {
+                if (!waypointsTraveler.IsMoving)
+                    waypointsTraveler.Move(true);
 
-        }
+                Debug.Log("RIGHT TRIGGER PRESS DETECTED");
+            }
 
+            if (Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") >= 0.9f)
+            {
+                if (!waypointsTraveler.IsMoving)
+                {
+                    waypointsTraveler.ResetTraveler();
+                    waypointsTraveler.Move(true);
+                }
 
+                Debug.Log("Oculus_CrossPlatform_SecondaryIndexTrigger TRIGGER PRESS DETECTED");
+            }
 
-        if (Input.GetButtonDown("Fire1"))
-        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                if (!waypointsTraveler.IsMoving)
+                {
+                    waypointsTraveler.ResetTraveler();
+                    waypointsTraveler.Move(true);
+                }
+                else
+                    ScreamAudioSource.PlayOneShot(ScreamAudioClip);
+
+                Debug.Log("Fire1 TRIGGER PRESS DETECTED");
+            }
+
             if (!waypointsTraveler.IsMoving)
             {
-                waypointsTraveler.ResetTraveler();
-                waypointsTraveler.Move(true);
+                UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(0);
             }
-            else
-                ScreamAudioSource.PlayOneShot(ScreamAudioClip);
-
-            Debug.Log("Fire1 TRIGGER PRESS DETECTED");
-            //LoadArrow();
-
         }
     }
 }

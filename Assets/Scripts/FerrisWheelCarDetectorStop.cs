@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FerrisWheelCarDetectorStop : MonoBehaviour
 {
@@ -10,7 +11,6 @@ public class FerrisWheelCarDetectorStop : MonoBehaviour
 
     private int rotationCounter = 0;
     private BoxCollider thisBoxCollider;
-    private bool hasRideStarted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,22 +30,28 @@ public class FerrisWheelCarDetectorStop : MonoBehaviour
         {
             rotationCounter++;
 
-            if (rotationCounter >= NumberOfRotations)
+            if (rotationCounter >= NumberOfRotations && NumberOfRotations != -1)
             {
+                opencloseDoor doorControls = other.gameObject.GetComponentInChildren<opencloseDoor>();
+                doorControls.OpenDoor();
                 FerrisSpinReference.StopRotating();
                 rotationCounter = 0;
-                //hasRideStarted = false;
                 CarDetectorStart.enabled = true;
                 thisBoxCollider.enabled = false;
+
+                SceneManager.LoadSceneAsync(0);
             }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        //if (other.gameObject.tag == "PlayersCar")
-        //{
-        //    hasRideStarted = true;
-        //}
+        
+    }
+
+    public void StopOnNextPass()
+    {
+        //this will cause the car to stop the next time it triggers the OnTriggerEnter event
+        NumberOfRotations = 0;
     }
 }
