@@ -1,0 +1,11 @@
+this a very detailed 3D polygonal SWING CHAIR
+
+designed using 3D MAX 2009, and rendered using Mental Ray renderer
+
+Materials used are the defualt mental ray materials combined with UVW based textures
+
+textures are high resoltuions 2500X2500 PXL
+
+textures are included in the zipped folders
+
+
