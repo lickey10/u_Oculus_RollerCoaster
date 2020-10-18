@@ -1211,28 +1211,18 @@ MonoBehaviour:
   onBoneTransformsUpdated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_SkeletonEvent, SteamVR, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   onTransformUpdated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_SkeletonEvent, SteamVR, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   onTransformChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_SkeletonEvent, SteamVR, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   onConnectedChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_Skeleton_ConnectedChangedEvent, SteamVR,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onTrackingChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_Skeleton_TrackingChangedEvent, SteamVR,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   mirroring: 2
   fallbackPoser: {fileID: 6357431957733126996}
   fallbackCurlAction:
@@ -1320,28 +1310,18 @@ MonoBehaviour:
   onTransformUpdated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_PoseEvent, SteamVR, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   onTransformChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_PoseEvent, SteamVR, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   onConnectedChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_Pose_ConnectedChangedEvent, SteamVR, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   onTrackingChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_Pose_TrackingChangedEvent, SteamVR, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   onDeviceIndexChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_Pose_DeviceIndexChangedEvent, SteamVR,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   broadcastDeviceChanges: 1
 --- !u!1 &6461730087339167882
 GameObject:
@@ -1557,6 +1537,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1568,6 +1549,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1869,28 +1851,18 @@ MonoBehaviour:
   onBoneTransformsUpdated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_SkeletonEvent, SteamVR, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   onTransformUpdated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_SkeletonEvent, SteamVR, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   onTransformChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_SkeletonEvent, SteamVR, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   onConnectedChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_Skeleton_ConnectedChangedEvent, SteamVR,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onTrackingChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Valve.VR.SteamVR_Behaviour_Skeleton_TrackingChangedEvent, SteamVR,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   mirroring: 0
   fallbackPoser: {fileID: 6357431958936291500}
   fallbackCurlAction:
@@ -1926,16 +1898,16 @@ MonoBehaviour:
   trackedObject: {fileID: 0}
   grabPinchAction:
     actionPath: /actions/default/in/GrabPinch
-    needsReinit: 0
+    needsReinit: 1
   grabGripAction:
     actionPath: /actions/default/in/GrabGrip
-    needsReinit: 0
+    needsReinit: 1
   hapticAction:
     actionPath: /actions/default/out/Haptic
-    needsReinit: 0
+    needsReinit: 1
   uiInteractAction:
     actionPath: /actions/default/in/InteractUI
-    needsReinit: 0
+    needsReinit: 1
   useHoverSphere: 1
   hoverSphereTransform: {fileID: 0}
   hoverSphereRadius: 0.05
@@ -2115,6 +2087,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2126,6 +2099,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3058,6 +3032,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3069,6 +3044,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3229,6 +3205,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3240,6 +3217,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3358,7 +3336,8 @@ MonoBehaviour:
   extraHiddenLayers:
     serializedVersion: 2
     m_Bits: 0
-  externalCompositionBackdropColor: {r: 0, g: 0, b: 0, a: 0}
+  externalCompositionBackdropColorRift: {r: 0, g: 1, b: 0, a: 1}
+  externalCompositionBackdropColorQuest: {r: 0, g: 0, b: 0, a: 0}
   capturingCameraDevice: 0
   flipCameraFrameHorizontally: 0
   flipCameraFrameVertically: 0
@@ -3386,6 +3365,7 @@ MonoBehaviour:
   resetTrackerOnLoad: 0
   AllowRecenter: 1
   _reorientHMDOnControllerRecenter: 1
+  LateControllerUpdate: 1
 --- !u!114 &6357048640625825763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3446,9 +3426,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -3529,9 +3510,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -3618,9 +3600,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -3665,7 +3648,7 @@ GameObject:
   - component: {fileID: 6462420029336166612}
   m_Layer: 0
   m_Name: OVRPlayerControllerPlusSteam
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
