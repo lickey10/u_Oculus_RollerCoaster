@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.49
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.49}
+  m_IndirectSpecularColor: {r: 0.09312946, g: 0.099481665, b: 0.117478125, a: 0.49}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -64,9 +64,10 @@ LightmapSettings:
     m_CompAOExponentDirect: 0
     m_ExtractAmbientOcclusion: 0
     m_Padding: 2
-    m_LightmapParameters: {fileID: 0}
+    m_LightmapParameters: {fileID: 15201, guid: 0000000000000000f000000000000000,
+      type: 0}
     m_LightmapsBakeMode: 1
-    m_TextureCompression: 1
+    m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
@@ -97,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 7eb01ae9200042649ae25567f5fd5c40,
+  m_LightingDataAsset: {fileID: 112000000, guid: 6c68d7aa94e5c9549a454fdfea8b17d4,
     type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -129,7 +130,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 51633404210498793, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 234465267153420018, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 236037551586900809, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536447633421213896, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540471739465205062, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930754659935011935, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464288807737754738, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793940125631702888, guid: be3c8264629a82e43b344f3d01c444f0,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -194,10 +230,60 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4793940126256640895, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793940126269897595, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793940126508262503, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793940126651536482, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793940126859981851, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: AutoStart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4793940126859981853, guid: be3c8264629a82e43b344f3d01c444f0,
         type: 3}
       propertyPath: ScreamAudioSource
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213602965643133619, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7270964376023368985, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8240262028406628938, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465589369902100200, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8841829019947203400, guid: be3c8264629a82e43b344f3d01c444f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be3c8264629a82e43b344f3d01c444f0, type: 3}

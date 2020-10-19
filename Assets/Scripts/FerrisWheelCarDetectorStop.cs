@@ -8,6 +8,7 @@ public class FerrisWheelCarDetectorStop : MonoBehaviour
     public FerrisSpin FerrisSpinReference;
     public int NumberOfRotations = 1;
     public BoxCollider CarDetectorStart;
+    public GameObject SpawnPoint;
 
     private int rotationCounter = 0;
     private BoxCollider thisBoxCollider;
@@ -38,6 +39,8 @@ public class FerrisWheelCarDetectorStop : MonoBehaviour
                 rotationCounter = 0;
                 CarDetectorStart.enabled = true;
                 thisBoxCollider.enabled = false;
+
+                PlayerPrefs.SetString("SpawnPoint", SpawnPoint.transform.position.ToString());
 
                 if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "AmusementPark")//only reload the scene if we aren't in the amusement park scene
                     SceneManager.LoadSceneAsync(0);
