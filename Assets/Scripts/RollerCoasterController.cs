@@ -8,11 +8,13 @@ public class RollerCoasterController : MonoBehaviour
     public AudioClip ScreamAudioClip;
 
     WaypointsFree.WaypointsTraveler waypointsTraveler;
+    bool rideStarted = false;
 
     // Start is called before the first frame update
     void Start()
     {
         waypointsTraveler = GetComponent<WaypointsFree.WaypointsTraveler>();
+        rideStarted = waypointsTraveler.AutoStart;
 
         if(ScreamAudioSource == null)
             ScreamAudioSource = GetComponent<AudioSource>();
@@ -34,6 +36,8 @@ public class RollerCoasterController : MonoBehaviour
                 if (!waypointsTraveler.IsMoving)
                     waypointsTraveler.Move(true);
 
+                rideStarted = true;
+
                 Debug.Log("LEFT TRIGGER PRESS DETECTED");
             }
 
@@ -41,6 +45,8 @@ public class RollerCoasterController : MonoBehaviour
             {
                 if (!waypointsTraveler.IsMoving)
                     waypointsTraveler.Move(true);
+
+                rideStarted = true;
 
                 Debug.Log("RIGHT TRIGGER PRESS DETECTED");
             }
@@ -52,6 +58,8 @@ public class RollerCoasterController : MonoBehaviour
                     waypointsTraveler.ResetTraveler();
                     waypointsTraveler.Move(true);
                 }
+
+                rideStarted = true;
 
                 Debug.Log("Oculus_CrossPlatform_SecondaryIndexTrigger TRIGGER PRESS DETECTED");
             }
@@ -66,11 +74,15 @@ public class RollerCoasterController : MonoBehaviour
                 else
                     ScreamAudioSource.PlayOneShot(ScreamAudioClip);
 
+                rideStarted = true;
+
                 Debug.Log("Fire1 TRIGGER PRESS DETECTED");
             }
 
-            if (!waypointsTraveler.IsMoving)
+            if (rideStarted && !waypointsTraveler.IsMoving)
             {
+                rideStarted = false;
+
                 UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(0);
             }
         }

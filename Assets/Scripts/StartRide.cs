@@ -29,4 +29,6 @@ public class StartRide : MonoBehaviour
             SceneManager.LoadSceneAsync(SceneIndexToLoad);
         }
     }
+
+    
 }

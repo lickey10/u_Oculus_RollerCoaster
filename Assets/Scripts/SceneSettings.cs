@@ -10,16 +10,24 @@ public class SceneSettings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string spawnPointString = PlayerPrefs.GetString("SpawnPoint","");
+//#if !UNITY_EDITOR
+//        GameObject.FindGameObjectWithTag("Player").GetComponent<MouseLook>().enabled = false;
+//        Debug.Log("NOT Unity Editor");
+//#endif
 
-        if (spawnPointString.Contains(","))
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "AmusementPark")//only move player to spawnPoint if it is the amusement park
         {
-            string[] vectors = spawnPointString.Split(',');
-            SpawnPoint = new Vector3(int.Parse(vectors[0]), int.Parse(vectors[1]), int.Parse(vectors[2]));
+            string spawnPointString = PlayerPrefs.GetString("SpawnPoint", "").Replace("(", "").Replace(")", "");
 
-            //place player
-            GameObject player = GameObject.FindWithTag("Player");
-            player.transform.position = SpawnPoint;
+            if (spawnPointString.Contains(","))
+            {
+                string[] vectors = spawnPointString.Split(',');
+                SpawnPoint = new Vector3(float.Parse(vectors[0]), float.Parse(vectors[1]), float.Parse(vectors[2]));
+
+                //place player
+                GameObject player = GameObject.FindWithTag("Player");
+                player.transform.position = SpawnPoint;
+            }
         }
     }
 
