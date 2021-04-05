@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ride_RollerCoaster.unity
     guid: 6f6711a990f691a419154ab801eee8ca
+  - enabled: 1
+    path: Assets/Scenes/Ride_CrystalMine.unity
+    guid: 51f0665c73e715c418d0114828d77b4d
   m_configObjects: {}
