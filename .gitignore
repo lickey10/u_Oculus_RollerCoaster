@@ -60,3 +60,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 Assets/Models/FreeStairs.zip
+**/Temp/**
+**/Library/**
+**/obj/**
+**/logs/**
