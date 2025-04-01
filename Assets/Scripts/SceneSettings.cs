@@ -17,7 +17,7 @@ public class SceneSettings : MonoBehaviour
 
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "AmusementPark")//only move player to spawnPoint if it is the amusement park
         {
-            string spawnPointString = PlayerPrefs.GetString("SpawnPoint", "").Replace("(", "").Replace(")", "");
+            string spawnPointString = "";// PlayerPrefs.GetString("SpawnPoint", "").Replace("(", "").Replace(")", "");
 
             if (spawnPointString.Contains(","))
             {
